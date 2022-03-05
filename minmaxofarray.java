@@ -24,5 +24,6 @@ public class Minmaxofarray {
             }
         }
         System.out.println(max + " " + min);
+        sc.close();
     }
 }

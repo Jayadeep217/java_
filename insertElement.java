@@ -24,5 +24,6 @@ public class InsertElement {
         for (int i = 0; i <= arr2.length - 1; i++) {
             System.out.print(arr2[i] + " ");
         }
+        sc.close();
     }
 }

@@ -26,5 +26,6 @@ public class RemoveElement {
         {
             System.out.print(arr2[i] + " ");
         }
+        sc.close();
     }
 }
