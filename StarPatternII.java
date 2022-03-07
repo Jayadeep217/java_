@@ -10,15 +10,7 @@ public class StarPatternII {
         {
             for(int j = 1;j<=temp;j++)
             {
-                if(j == temp)
-                {
-                    System.out.print('*');
-                }
-                else if (j == 1)
-                {
-                    System.out.print('*');
-                }
-                else if ( i == 1)
+                if(j == temp || j == 1 || i == 1)
                 {
                     System.out.print('*');
                 }
