@@ -1,6 +1,15 @@
 import java.util.Scanner;
 
 public class DiffBtwMaxOfEvenMinOfOdd {
+
+    public static void printArray(int[] a) {
+        for(int i = 0; i<a.length;i++)
+        {
+            System.out.print(a[i] + " ");
+        }
+        System.out.println();
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int sizeOfArray = sc.nextInt();
@@ -35,22 +44,27 @@ public class DiffBtwMaxOfEvenMinOfOdd {
                 oddArr[odd++] = arr[j];
             }
         }
+        printArray(evenArr);
+        printArray(oddArr);
         int minOfOdd = oddArr[0], maxOfEven = evenArr[0];
-        for(int j = 1; j<=oddArr.length-1;j++)
+        for(int j = 0; j<oddArr.length;j++)
         {
-            if(minOfOdd > arr[j])
+            if(minOfOdd > oddArr[j])
             {
-                minOfOdd = arr[j];
+                minOfOdd = oddArr[j];
             }
         }
-        for(int j = 1; j<=evenArr.length-1;j++)
+        for(int k = 0; k<evenArr.length;k++)
         {
                 
-            if (maxOfEven < arr[j])
+            if (maxOfEven < evenArr[k])
             {
-                maxOfEven = arr[j];
+                maxOfEven = evenArr[k];
             }
         }
+        System.out.println("maxOfEven : " + maxOfEven);
+        System.out.println("minOfOdd : " + minOfOdd);
+        System.out.println(maxOfEven - minOfOdd);
         sc.close();
     }
 }
